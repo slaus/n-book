@@ -1,0 +1,35 @@
+@mixin font-face($name, $filename, $style, $weight) {
+  $folder: '../fonts/';
+  $filepath: $folder + $filename;
+  @font-face {
+    font-family: "#{$name}";
+    font-style: $style;
+    font-weight: $weight;
+
+    src: url($filepath + ".eot");
+    src: url($filepath + ".eot?#iefix") format('embedded-opentype'),
+    url($filepath + ".woff") format('woff'),
+    url($filepath + ".ttf")  format('truetype'),
+    url($filepath + ".svg#" + $name + "") format('svg');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@include font-face('Glyphicons Halflings', 'glyphicons-halflings-regular', 'normal', '300');
+@include font-face('Font Awesome', 'fontawesome-webfont', 'normal', '300');
+
+
+$font-icon: 'Glyphicons Halflings';
+$font-awesome: 'Font Awesome';
+
+$black: #161616 !default;
+$blue: #2B8CDB !default;
+$dark-blue: #274869 !default;
+$green: #5ec6a3 !default;
+$light-grey: #7e7e7e !default;
+$grey: #525257 !default;
+$dark-grey: #5b6f7d !default;
+$dark-green: #00645e !default;
+$light-green: #83d3dc !default;
+$white: #fff !default;

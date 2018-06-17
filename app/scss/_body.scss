@@ -1,0 +1,107 @@
+/*!
+ * Body content
+ */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+html, body {
+  width:100%;
+  margin:0;
+  padding:0;
+  //overflow: -webkit-paged-y;
+}
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* error if tags without attr */
+img:not([alt]),
+label:not([for]),
+input[type=submit]:not([value]) {
+  outline: 1px dotted red;
+}
+
+/* error if first child not used  */
+ul > *:not(li),
+ol > *:not(li),
+dl > *:not(dt):not(dd) {
+  outline: 1px dotted red;
+}
+
+input:focus, textarea, a, button {
+  outline: none !important;
+  -webkit-appearance: none !important; //trouble with radiobutton
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.clearfix {
+
+  &:after,
+  &:before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+#back-to-top {
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  background-color: $blue;
+  text-transform: uppercase;
+  position: fixed;
+  right: 54px;
+  bottom: 190px;
+  border-radius: 50%;
+  line-height: 50px;
+  font-size: 22px;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+
+  &:hover {
+    background: $blue;
+    text-decoration: none;
+
+    & .fa {
+      color: rgba(255,255,255,.6);
+    }
+  }
+}
+
+a {
+  transition: .4s;
+
+  &:hover {
+    color: $blue !important;
+  }
+}
+
+.white {
+  color: #fff;
+}
+.normal {
+  font-weight: 400;
+}
+.bold {
+  font-weight: 700;
+}
+
+.h1 {
+  font-size: 48px;
+}
+.h2 {
+  font-size: 40px;
+}
+.h3 {
+  font-size: 32px;
+}
