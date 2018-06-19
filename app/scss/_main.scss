@@ -103,7 +103,7 @@
 
 }
 .block-top-bg {
-  background: $blue;
+  background: $light-grey;
   position: relative;
 }
 
@@ -345,6 +345,10 @@
 }
 .brand {
   margin-bottom: 60px;
+
+  & img {
+    margin: 0 20px;
+  }
 }
 .jcarousel-wrapper .jcarousel-pagination,
 .jcarousel-wrapper .jcarousel-pagination {
@@ -446,7 +450,7 @@
 .sell-block {
   margin: auto;
   padding: 100px;
-  background: #000 url("../images/best4mining-gpu-background3.png") center center no-repeat;
+  background: $grey url("../images/best4mining-gpu-background3.png") center center no-repeat;
   background-size: cover;
   justify-content: space-between;
   flex-direction: column;

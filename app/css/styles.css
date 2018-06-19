@@ -66,7 +66,7 @@ input:focus, textarea, a, button {
   text-transform: uppercase;
   position: fixed;
   right: 54px;
-  bottom: 190px;
+  bottom: 80px;
   border-radius: 50%;
   line-height: 50px;
   font-size: 22px;
@@ -219,7 +219,7 @@ a {
     display: none; }
 
 .block-top-bg {
-  background: #2B8CDB;
+  background: #7e7e7e;
   position: relative; }
 
 .button, .button:visited {
@@ -412,6 +412,8 @@ a {
 
 .brand {
   margin-bottom: 60px; }
+  .brand img {
+    margin: 0 20px; }
 
 .jcarousel-wrapper .jcarousel-pagination,
 .jcarousel-wrapper .jcarousel-pagination {
@@ -501,7 +503,7 @@ a {
 .sell-block {
   margin: auto;
   padding: 100px;
-  background: #000 url("../images/best4mining-gpu-background3.png") center center no-repeat;
+  background: #525257 url("../images/best4mining-gpu-background3.png") center center no-repeat;
   background-size: cover;
   justify-content: space-between;
   flex-direction: column; }
