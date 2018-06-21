@@ -2,23 +2,21 @@
 // Email Submit
 // Note: filter_var() requires PHP >= 5.2.0
 //print_r($_POST);
-if ( isset($_POST['name']) || isset($_POST['tel']) || isset($_POST['message']) || isset($_POST['url']) || isset($_POST['region']) || isset($_POST['hidden'])  ) {
+if ( isset($_POST['name']) && isset($_POST['tel']) && isset($_POST['message']) && isset($_POST['mail']) ) {
 
 	//$to = "mister.slaus@gmail.com";	// receiver of the email
-        $to="mister.slaus@gmail.com";
-        $subject = "--- Сообщение с сайта SEO ---";			// subject of the email
+        $to = "info@n-book.in.ua";
+        $subject = '--- Сообщение о желании купить ноутбук от пользователя ' . $_POST['name'] . ', телефон: ' . $_POST['tel'] . ' ---';			// subject of the email
 	$message = '
 	<html>
 		<head>
     			<meta charset="utf-8">
-			<title>Заказ SEO оптимизации сайта ' . $_POST['url'] . '</title>
+			<title>Сообщение о желании купить ноутбук от пользователя ' . $_POST['name'] . ' с телефоном ' . $_POST['tel'] . ' </title>
 		</head>
 		<body>
 			<h3>Имя: <span style="font-weight: normal;">' . $_POST['name'] . '</span></h3>
 			<h3>Телефон: <span style="font-weight: normal;">' . $_POST['tel'] . '</span></h3>
-			<h3>---- <span style="font-weight: normal;">' . $_POST['hidden'] . '</span> ----</h3>
-			<h3>URL сайта: <span style="font-weight: normal;">' . $_POST['url'] . '</span></h3>
-			<h3>Регион рекламы: <span style="font-weight: normal;">' . $_POST['region'] . '</span></h3>
+			<h3>E-mail: <span style="font-weight: normal;">' . $_POST['mail'] . '</span></h3>
 			<div>
 				<h3 style="margin-bottom: 5px;">Сообщение:</h3>
 				<div>' . $_POST['message'] . '</div>
@@ -32,7 +30,7 @@ if ( isset($_POST['name']) || isset($_POST['tel']) || isset($_POST['message']) |
 	if (mail($to, $subject, $message, $headers)) {
 	   echo '<html>
 		    <head>
-    	        <meta http-equiv="Refresh" content="5; URL=https://xwork.site/seo/" />
+    	        <meta http-equiv="Refresh" content="5; URL=https://n-book.in.ua/" />
     	    </head>
 		    <body>
 	            <div align="center" style="margin-top:30%;"><h4>Спасибо, Ваше письмо было отправлено.</h4><h3>Наш менеджер свяжется с Вами в ближайшее время.</h3><h5>Через 5 секунд Вы будете перенаправлены на сайт.<h5></div>
@@ -41,7 +39,7 @@ if ( isset($_POST['name']) || isset($_POST['tel']) || isset($_POST['message']) |
 	} else {
 	   echo '<html>
 		    <head>
-    	        <meta http-equiv="Refresh" content="5; URL=https://xwork.site/seo/" />
+    	        <meta http-equiv="Refresh" content="5; URL=https://n-book.in.ua/" />
     	    </head>
 		    <body>
 	            <div align="center" style="margin-top:30%;"><h4>Произошла ошибка при отправки сообщения.</h4><h5>Через 5 секунд Вы будете перенаправлены на сайт</h5></div>
