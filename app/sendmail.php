@@ -5,7 +5,7 @@
 if ( isset($_POST['name']) && isset($_POST['tel']) && isset($_POST['message']) && isset($_POST['mail']) ) {
 
 	//$to = "mister.slaus@gmail.com";	// receiver of the email
-        $to = "info@n-book.in.ua";
+        $to = "niknake@mail.ru";
         $subject = '--- Сообщение о желании купить ноутбук от пользователя ' . $_POST['name'] . ', телефон: ' . $_POST['tel'] . ' ---';			// subject of the email
 	$message = '
 	<html>
@@ -30,7 +30,7 @@ if ( isset($_POST['name']) && isset($_POST['tel']) && isset($_POST['message']) &
 	if (mail($to, $subject, $message, $headers)) {
 	   echo '<html>
 		    <head>
-    	        <meta http-equiv="Refresh" content="5; URL=https://n-book.in.ua/" />
+    	        <meta http-equiv="Refresh" content="5; URL=http://landing.n-book.in.ua/" />
     	    </head>
 		    <body>
 	            <div align="center" style="margin-top:30%;"><h4>Спасибо, Ваше письмо было отправлено.</h4><h3>Наш менеджер свяжется с Вами в ближайшее время.</h3><h5>Через 5 секунд Вы будете перенаправлены на сайт.<h5></div>
@@ -39,7 +39,7 @@ if ( isset($_POST['name']) && isset($_POST['tel']) && isset($_POST['message']) &
 	} else {
 	   echo '<html>
 		    <head>
-    	        <meta http-equiv="Refresh" content="5; URL=https://n-book.in.ua/" />
+    	        <meta http-equiv="Refresh" content="5; URL=http://landing.n-book.in.ua/" />
     	    </head>
 		    <body>
 	            <div align="center" style="margin-top:30%;"><h4>Произошла ошибка при отправки сообщения.</h4><h5>Через 5 секунд Вы будете перенаправлены на сайт</h5></div>

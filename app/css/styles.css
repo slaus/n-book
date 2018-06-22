@@ -227,6 +227,8 @@ a {
   font-size: 26px;
   font-weight: 600;
   margin-top: 0; }
+  .price span {
+    font-weight: 300; }
 
 .block-top-bg {
   background: #7e7e7e;
@@ -413,6 +415,16 @@ a {
 
 .parallax {
   position: relative; }
+  .parallax .title {
+    position: absolute;
+    bottom: 0px;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    text-shadow: 3px 3px 17px #000; }
   .parallax .order {
     position: absolute;
     bottom: 50px;
@@ -542,6 +554,23 @@ a {
   position: absolute;
   left: 0;
   right: 0; }
+
+.action-block-title {
+  padding-bottom: 10px;
+  color: #f70303; }
+
+.timing {
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+  height: 50px;
+  text-transform: uppercase;
+  margin-top: -10px;
+  padding-bottom: 20px; }
+  .timing span {
+    display: block;
+    padding-left: 22px;
+    padding-right: 22px; }
 
 /*!
  * Footer content

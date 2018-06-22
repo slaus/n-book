@@ -1,26 +1,6 @@
 //Slider settings
 jQuery(function ($) {
 
-    // $('.parallax_classic_bullets_100').parallax_classic({
-    //     skin: 'bullets',
-    //     width: 1920,
-    //     height: 1000,
-    //     width100Proc: true,
-    //     defaultEasing: 'easeOutElastic',
-    //     autoPlay: 0,
-    //     responsive: true,
-    //     autoHideBottomNav: true,
-    //     showPreviewThumbs: false,
-    //     autoHideNavArrows: true,
-    //     showCircleTimer: false,
-    //     myloaderTime: 3,
-    //     scrollSlideDuration: 1.8,
-    //     scrollSlideEasing: 'easeInQuint',
-    //     thumbsWrapperMarginBottom: 20,
-    //     showAllControllers: false,
-    //     showBottomNav: false
-    // });
-
     $('.parallax_classic_bullets').parallax_classic({
         skin: 'bullets',
         width: 600,
@@ -146,6 +126,22 @@ jQuery(function ($) {
                 return '<a href="#' + page + '">' + page + '</a>';
             }
         });
+
+
+//Time Coundown
+    var now = new Date();
+
+    var ts = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+
+
+    if ((new Date()) > ts) {
+
+        ts = (new Date()).getTime() + 10 * 24 * 60 * 60 * 1000;
+    }
+
+    $('#countdown').countdown({
+        timestamp: ts
+    });
 });
 
 
