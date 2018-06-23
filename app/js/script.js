@@ -142,6 +142,15 @@ jQuery(function ($) {
     $('#countdown').countdown({
         timestamp: ts
     });
+
+//Order
+    $(".preorder").click(function () {
+        var product = $(this).parent(".block-top-text").find("h2").text();
+        var price = $(this).parent(".block-top-text").find(".price").text().match(/\d+/g);
+
+        $("#exampleModal").find(".modal-title").html("Заказать " + product);
+        $("#message").val("Здравствуйте, я хочу купить ноутбук " + product + " по цене " + price + " грн. Свяжитесь со мной пожалуйста.");
+    });
 });
 
 

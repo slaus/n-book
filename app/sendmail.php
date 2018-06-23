@@ -4,8 +4,8 @@
 //print_r($_POST);
 if ( isset($_POST['name']) && isset($_POST['tel']) && isset($_POST['message']) && isset($_POST['mail']) ) {
 
-	//$to = "mister.slaus@gmail.com";	// receiver of the email
-        $to = "niknake@mail.ru";
+	$to = "mister.slaus@gmail.com";	// receiver of the email
+        //$to = "niknake@mail.ru";
         $subject = '--- Сообщение о желании купить ноутбук от пользователя ' . $_POST['name'] . ', телефон: ' . $_POST['tel'] . ' ---';			// subject of the email
 	$message = '
 	<html>
